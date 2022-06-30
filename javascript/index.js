@@ -6,7 +6,7 @@ function initMap() {
         center: location
     });
     function updateMap() {
-        fetch("/data.json")
+        fetch("../records/data.json")
             .then(response => response.json())
             .then(rsp => {
                 console.log(rsp.data)
