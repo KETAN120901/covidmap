@@ -45,10 +45,12 @@ function initMap() {
                         recovered: ${element.recovered}`
                     });
 
-                    marker.addListener("click", () => {
+                   marker.addListener("mouseover", () => {
                         infowindow.open(marker.get("map"), marker);
                     });
-                   
+                    marker.addListener("mouseout", () => {
+                        infowindow.close(marker.get("map"), marker);
+                    });
                 });
             })
     }
