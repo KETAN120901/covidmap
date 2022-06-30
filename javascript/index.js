@@ -32,7 +32,23 @@ function initMap() {
                         map: map
 
                     });
-                    
+                    const infowindow = new google.maps.InfoWindow({
+                        content: `latitude: ${element.latitude}<br>
+                        
+                        longitude: ${element.longitude}<br>
+                        name: ${element.name}<br>
+                        country: ${element.country}<br>
+                        lastUpdated: ${element.lastUpdated}<br>
+                        dead: ${element.dead}<br>
+                        
+                        infected: ${element.infected}<br>
+                        recovered: ${element.recovered}`
+                    });
+
+                    marker.addListener("click", () => {
+                        infowindow.open(marker.get("map"), marker);
+                    });
+                   
                 });
             })
     }
