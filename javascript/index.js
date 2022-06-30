@@ -33,14 +33,14 @@ function initMap() {
 
                     });
                     const infowindow = new google.maps.InfoWindow({
-                        content: `latitude: ${element.latitude}<br>
-                        
+                       content:`latitude: ${element.latitude}<br>
+                        pop: ${element.pop}<br>
                         longitude: ${element.longitude}<br>
                         name: ${element.name}<br>
                         country: ${element.country}<br>
                         lastUpdated: ${element.lastUpdated}<br>
                         dead: ${element.dead}<br>
-                        
+                        id: ${element.id}<br>
                         infected: ${element.infected}<br>
                         recovered: ${element.recovered}`
                     });
